@@ -1,6 +1,7 @@
 <?php
 	session_start();
-	if($_SESSION['admin']==0)
+    	$temp=$_SESSION['flogin'];
+	if($temp==0)
 	{
 		echo '<meta http-equiv="refresh" content="0; URL=loggedout.php">';
 	}
