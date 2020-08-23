@@ -33,13 +33,20 @@
 		$ans[$i]=$data['answer'];
 		$i=$i+1;
 	}
-	$_SESSION["qno"]=$qno;
-	$_SESSION["q"]=$q;
-	$_SESSION["opt1"]=$opt1;
-	$_SESSION["opt2"]=$opt2;
-	$_SESSION["opt3"]=$opt3;
-	$_SESSION["opt4"]=$opt4;
-	$_SESSION["ans"]=$ans;
-	echo '<meta http-equiv="refresh" content="0; URL=getexam.php">';
+	if($i>1)
+	{
+		$_SESSION["qno"]=$qno;
+		$_SESSION["q"]=$q;
+		$_SESSION["opt1"]=$opt1;
+		$_SESSION["opt2"]=$opt2;
+		$_SESSION["opt3"]=$opt3;
+		$_SESSION["opt4"]=$opt4;
+		$_SESSION["ans"]=$ans;
+		echo '<meta http-equiv="refresh" content="0; URL=getexam.php">';
+	}
+	else
+	{
+	    echo '<meta http-equiv="refresh" content="0; URL=testdone.php">';
+	}
 	}
 ?>
